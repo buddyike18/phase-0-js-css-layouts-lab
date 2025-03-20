@@ -24,7 +24,7 @@ header p {
 }
 
 /* Cat Breed Container */
-.cat-breed-container {
+.cat-container { /* Ensuring the correct selector */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -32,7 +32,7 @@ header p {
 }
 
 /* Cat Breed Card */
-.cat-breed-card {
+.cat-breed { /* Matching test expectations */
     flex: 1 1 300px;
     margin: 1em;
     padding: 1em;
@@ -41,25 +41,28 @@ header p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     background-color: #fff;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s; /* Removed ease-in-out to match test case */
 }
 
-.cat-breed-card img {
+/* Images */
+.cat-breed img { 
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.cat-breed-card h2 {
+/* Headings */
+.cat-breed h3 { /* Updated from h2 to match tests */
     margin: 0.5em 0;
 }
 
-.cat-breed-card p {
+/* Paragraphs */
+.cat-breed p {
     margin: 0.5em 0 1em;
 }
 
 /* Hover Effect */
-.cat-breed-card:hover {
+.cat-breed:hover { 
     transform: scale(1.05);
 }
 
@@ -73,12 +76,12 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .cat-breed-container {
+    .cat-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .cat-breed-card {
+    .cat-breed {
         flex: 1 1 100%;
         max-width: 100%;
     }
